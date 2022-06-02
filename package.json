@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint"
-  },
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+},
   "dependencies": {
     "next": "12.1.6",
     "react": "18.1.0",
