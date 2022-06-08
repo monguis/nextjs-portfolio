@@ -1,17 +1,13 @@
-html,
+@use "./partials/colors";
+@use "./partials/fonts.scss";
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: colors.$background-main-color;
+  font-size:fonts.$regular-size;
+  font-family: fonts.$regular-family;
 }
 
-a {
-  color: inherit;
+a{
   text-decoration: none;
+  color:colors.$hightlight-color;
 }
-
-* {
-  box-sizing: border-box;
-}
-
