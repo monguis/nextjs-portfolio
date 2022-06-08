@@ -1,0 +1,11 @@
+@use "../../../node_modules/bootstrap/scss/variables";
+
+@function getBreakpoint($breakpoint){
+    @return map-get($grid-breakpoints, $breakpoint);
+}
+
+@mixin mobile{
+    @media screen and (max-width:getBreakpoint($breakpoint:xs)) {
+        @content;
+    }
+}

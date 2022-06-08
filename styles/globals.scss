@@ -1,17 +1,77 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import "_resets.scss";
+.regular-text {
+  //how we fetch variables
+  color: $primary-color;
+  //how we fetch map indexes
+  font-weight: map-get($font-weights, regular);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+//this is how we declare  a funtion, to call it, we can calling like: weight(args)
+@function weight($weight-name){
+  @return map-get($font-weights, $weight-name);
 }
 
-* {
-  box-sizing: border-box;
+.main {
+  width:80%;
+  margin:0 auto;
+
+  //when nesting, & means the parent element, following line translates as .main__paragraph
+  &__paragraph{
+    font-weight: weight(regular);
+  }
 }
 
+//doing this will create classes that are not related, to prevent that we use interpolation like:
+
+.main {
+  //we can implement operations such as the following, as long as all types involved match.
+  width:80%-40%;
+  margin:0 auto;
+  // we use the @include keyword to add mixins to our element styles
+  @include flexContainer(center);
+
+  //when nesting, & means the parent element, following line translates as .main__paragraph
+  #{&}__paragraph1{
+    font-weight: map-get($font-weights, regular);
+    //since the parent was interpolated, now the & symbol represents the correct value.
+    &:hover{
+      //do something.
+    }
+  }
+
+  #{&}__paragraph2{
+    //the extend keyword allows us to extend from the selected class, inheriting its styles.
+    @extend .main__paragraph1;
+    }
+//whatever we declare inside this mixin will be injected once the media query is triggered
+  @include mobile{
+    //do something...
+  }
+}
+
+//mixins can add styles to elements so that we don't repeat ourselves. Mixins take arguments as well to adjust to multiple situations.
+@mixin flexContainer($jContent) {
+  display: flex;
+  justify-content: $jContent;
+  align-items: center;
+}
+
+//we can declare mixins with conditional code structures, if the mixin is empty, no css will be loaded.
+@mixin theme($dark-theme: false) {
+  @if $light-theme{
+    background-color: lighten($primary-color, 100%);
+  }
+}
+
+.light{
+  //we could not type $dark-theme since it is implicit, however, for the sake of readibility, it was included.
+  @include theme($dark-theme:true);
+}
+
+
+//we are able to collect children and wrap them into the mixin, example upwards.
+@mixin mobile{
+ @media (max-width:$mobile){
+   @content;
+ }
+}
