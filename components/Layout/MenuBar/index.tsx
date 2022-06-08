@@ -9,7 +9,7 @@ export type navBarLinkType = {
     name: string;
     rel?: string;
     target?: string;
-}
+} 
 
 const MenuBar: React.FC = () => {
     return <header>
