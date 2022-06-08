@@ -10,4 +10,8 @@ export const menuLinksArray: navBarLinkType[] = [
     address: "/",
     name: "Portfolio",
   },
+  {
+    address: "/",
+    name: "Portfolio",
+  },
 ];

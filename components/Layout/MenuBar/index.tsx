@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Container, Navbar } from "react-bootstrap";
 import { menuLinksArray } from "./content/menuLinksArray";
+import styles from "../../../styles/componentStyles/Layout/menubar.module.scss"
 
 export type navBarLinkType = {
     address: string;
@@ -11,22 +12,18 @@ export type navBarLinkType = {
 }
 
 const MenuBar: React.FC = () => {
-    return <Navbar bg="dark" variant="dark">
+    return <header>
+        <Navbar className={styles["menu-navbar"]}>
         <Container>
-            <Navbar.Brand href="#home">
-                <Image
-                    alt=""
-                    src="/logo.svg"
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top"
-                />
+            <Navbar.Brand href="#home" className={styles["menu-navbar__brand-icon"]} >
                 JCCN Portfolio
             </Navbar.Brand>
             <Navbar.Collapse className="justify-content-end">
-                <ul>
+                <ul className={styles["menu-navbar__navlinks-wrapper"]}>
                     {menuLinksArray.map((navBarLink: navBarLinkType) =>
-                        <li key={"navBarLink" + " + " + navBarLink.address} >
+                        <li
+                        className={styles["menu-navbar__navlinks-wrapper__navlink"]}
+                        key={"navBarLink" + " + " + navBarLink.address} >
                             <Link href={navBarLink.address} passHref>
                                 <a>
                                     {navBarLink.name}
@@ -38,6 +35,8 @@ const MenuBar: React.FC = () => {
             </Navbar.Collapse>
         </Container>
     </Navbar>
+        </header>
+        
 }
 
 export default MenuBar

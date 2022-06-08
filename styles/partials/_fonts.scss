@@ -1,0 +1,15 @@
+@font-face {
+    font-family: opens;
+    src: url(../../fonts/OpenSans-Light.ttf);
+  }
+
+  @font-face {
+    font-family: opens-bold;
+    src: url(../../fonts/OpenSans-BoldItalic.ttf);
+  }
+
+$regular-size:16px;
+$large-size:32px;
+
+$regular-family:opens;
+$bold-family:opens-bold;

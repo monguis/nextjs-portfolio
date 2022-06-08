@@ -1,0 +1,30 @@
+@use "../../partials/fonts";
+@use "../../partials/effects";
+
+.menu-navbar{
+    padding:3rem 0;
+    border-bottom:1px solid red;
+
+    &__brand-icon{
+        background-color: red; 
+    }
+
+    &__navlinks-wrapper {
+        display: flex;
+        gap:20px;
+        list-style: none;
+        justify-content: center;
+        margin:0;
+
+        &__navlink {
+            position: relative;
+            font-family: fonts.$bold-family;
+            
+            @include effects.middle-to-edges-underline;
+            
+            a {
+                color:black !important;
+            }
+        }
+    }
+}
