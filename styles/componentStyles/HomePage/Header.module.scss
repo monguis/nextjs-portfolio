@@ -1,0 +1,36 @@
+@use "../../partials/fonts";
+
+.main_header {
+  padding: 200px 0;
+  width: 100%;
+  background-image: url(/images/carbon_fibre_pattern.png);
+  color: white;
+  position: relative;
+
+  &__headline {
+    font-family: fonts.$bold-family;
+    font-size: 4rem;
+  }
+
+  &__blurb {
+    font-family: fonts.$regular-family;
+    font-weight: lighter;
+    font-size: 36px;
+  }
+
+  &__learn-more-btn {
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px 40px;
+    background: #ffa100;
+    color: black;
+    font-weight: bold;
+    font-family: fonts.$regular-family;
+    border: 1px solid #ffa100;
+    line-height: 18px;
+
+    &:hover {
+      background: #eb9400;
+      border: 1px solid #eb9400;
+    }
+  }
+}
