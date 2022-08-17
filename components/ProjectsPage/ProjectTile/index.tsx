@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../../styles/componentStyles/ProjectsPage/projectTile.module.scss"
+import styles from "../../../styles/componentStyles/ProjectsPage/project-tile.module.scss"
 
 export const ProjectTile = () =>
     <div className={styles["project-tile"]}>

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Container, Navbar } from "react-bootstrap";
 import { menuLinksArray } from "./content/menuLinksArray";
-import styles from "../../../styles/componentStyles/Layout/menubar.module.scss"
+import styles from "../../../styles/componentStyles/Layout/menu-bar.module.scss"
 
 export type navBarLinkType = {
     address: string;
