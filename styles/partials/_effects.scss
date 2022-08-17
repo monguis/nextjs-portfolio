@@ -2,6 +2,9 @@
     transition:all 0.25s ease;
 }
 
+$default-shadow: 2px 2px 3px gray;
+$hovered-shadow: 2px 2px 5px 2px gray;
+
 @mixin middle-to-edges-underline {
     ::before{
         content:'';

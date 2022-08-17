@@ -1,0 +1,10 @@
+@mixin hexagon($size: 100px, $margn: 4px) {
+
+  $f: calc($size * 1.732 + 4 * $margn - 1px);
+
+  width: $size;
+  margin: $margn;
+  height: calc($size * 0.85);
+  display: inline-block;
+  font-size: initial;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);}

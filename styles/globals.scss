@@ -12,3 +12,8 @@ a{
   color:colors.$hightlight-color;
 }
 
+header{
+  position:relative;
+  z-index: 9999;
+}
+

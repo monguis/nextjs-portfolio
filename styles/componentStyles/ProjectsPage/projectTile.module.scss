@@ -1,0 +1,62 @@
+@use "../../partials/colors";
+@use "../../partials/effects";
+@use "../../partials/animations";
+
+.project-tile {
+  position: relative;
+  text-align: center;
+  background-color: white;
+  // padding:5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-top: 5px solid red;
+  transition: animations.$default-transition;
+  box-shadow: effects.$default-shadow;
+
+  &:hover {
+    box-shadow: effects.$hovered-shadow;
+  }
+  &__header {
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: -40px;
+      left: 0;
+      height: 40px;
+      background: linear-gradient(white, transparent);
+    }
+  }
+
+  &__image-section {
+    display: block;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    z-index: 5;
+  }
+
+  &__content {
+    padding: 20px;
+    &__description {
+    }
+
+    &__links-wrapper {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      &__related-links {
+        border-color: black;
+        &:hover {
+          color: colors.$hightlight-color;
+        }
+      }
+    }
+  }
+}

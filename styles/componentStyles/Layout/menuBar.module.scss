@@ -1,8 +1,8 @@
 @use "../../partials/fonts";
-@use "../../partials/effects";
+@use "/styles/partials/effects";
 
 .menu-navbar{
-    padding:3rem 0;
+    z-index: 9999;
     border-bottom:1px solid red;
 
     &__brand-icon{
@@ -16,7 +16,7 @@
         justify-content: center;
         margin:0;
 
-        &__navlink {
+        & .__navlink {
             position: relative;
             font-family: fonts.$bold-family;
             

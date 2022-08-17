@@ -6,6 +6,7 @@
   background-image: url(/images/carbon_fibre_pattern.png);
   color: white;
   position: relative;
+  z-index: -1;
 
   &__headline {
     font-family: fonts.$bold-family;

@@ -22,7 +22,7 @@ const MenuBar: React.FC = () => {
                 <ul className={styles["menu-navbar__navlinks-wrapper"]}>
                     {menuLinksArray.map((navBarLink: navBarLinkType) =>
                         <li
-                        className={styles["menu-navbar__navlink"]}
+                        className={styles["__navlink"]}
                         key={"navBarLink" + " + " + navBarLink.address} >
                             <Link href={navBarLink.address} passHref>
                                 <a>
