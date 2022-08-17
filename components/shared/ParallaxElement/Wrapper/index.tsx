@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import styles from "/styles/componentStyles/shared/Parallax/parallaxWrapper.module.scss"
+import styles from "../../../../styles/componentStyles/shared/Parallax/parallaxWrapper.module.scss"
 
 type ParallaxWrapperProps = {
     children: ReactNode

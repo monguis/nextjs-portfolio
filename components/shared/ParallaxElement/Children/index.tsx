@@ -1,5 +1,5 @@
 import { useRef, cloneElement, Children, ReactElement, createRef, useEffect, useState } from "react"
-import styles from "/styles/componentStyles/shared/Parallax/parallaxChildren.module.scss"
+import styles from "../../../../styles/componentStyles/shared/Parallax/parallaxChildren.module.scss"
 import { useRefDimensions } from "../../../../hooks/useRefDimensions"
 import { ParallaxLayer } from "./LayerClass";
 

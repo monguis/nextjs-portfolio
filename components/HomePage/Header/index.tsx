@@ -2,7 +2,7 @@ import { relative } from "path";
 import { Col, Row, Container } from "react-bootstrap";
 import { ParallaxChild } from "../../shared/ParallaxElement/Children";
 import { ParallaxLayer } from "../../shared/ParallaxElement/Children/LayerClass";
-import styles from "/styles/componentStyles/HomePage/Header.module.scss"
+import styles from "../../../styles/componentStyles/HomePage/Header.module.scss"
 
 const Header: React.FC<any> = () => {
 
