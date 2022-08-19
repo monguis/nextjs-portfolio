@@ -7,11 +7,14 @@ export const menuLinksArray: navBarLinkType[] = [
   },
 
   {
-    address: "/",
+    address: "/portfolio",
     name: "Portfolio",
   },
+
   {
-    address: "/",
-    name: "Portfolio",
+    address: "/contact",
+    name: "Contact Me",
   },
+
+
 ];

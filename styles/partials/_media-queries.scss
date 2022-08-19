@@ -1,11 +1,29 @@
-@use "../../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/root";
 
 @function getBreakpoint($breakpoint){
     @return map-get($grid-breakpoints, $breakpoint);
 }
 
 @mixin mobile{
-    @media screen and (max-width:getBreakpoint($breakpoint:xs)) {
+    @media screen and 
+    (max-width: getBreakpoint($breakpoint:sm)) {
         @content;
     }
 }
+
+@mixin tablet{
+    @media screen and 
+    (max-width: getBreakpoint($breakpoint:lg)) {
+        @content;
+    }
+}
+
+    
+    
