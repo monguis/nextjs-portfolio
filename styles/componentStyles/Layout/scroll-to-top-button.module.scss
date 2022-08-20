@@ -1,0 +1,32 @@
+@use "../../partials/colors";
+@use "../../partials/effects";
+
+
+.scroll-to-top-button{
+    position: sticky;
+    bottom:10px;
+    left: 100%;
+    margin-right: 15px;
+    padding:0px;
+    line-height: 2rem;
+    font-size: 2rem;
+    border:none;
+    border-radius: 50%;
+    color: colors.$primary-color;
+    margin-bottom:15px;
+    opacity: 1;
+    box-shadow: effects.$default-shadow;
+    visibility:visible;
+    @include effects.transition-ease;
+    
+    &:hover, &:active, &:focus {
+        bottom:13px;
+        color:colors.$hightlight-color;
+        box-shadow: effects.$hovered-shadow;
+    }
+
+    &.hidden{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
