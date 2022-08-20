@@ -8,7 +8,9 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => <ParallaxWrapper>
     <MenuBar />
-    {children}
+    <div className="page-wrapper">
+        {children}
+    </div>
     <FooterComponent />
 </ParallaxWrapper>
 

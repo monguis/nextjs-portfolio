@@ -1,0 +1,36 @@
+@use "../../partials/colors";
+@use "../../partials/effects";
+@use "../../partials/media-queries";
+
+.form-container {
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  &__form {
+    background-color: colors.$primary-color;
+    padding: 3rem 1rem;
+    color: colors.$secondary-color;
+    border: 1px solid colors.$primary-color;
+    box-shadow: effects.$default-shadow;
+    border-radius: 5px;
+    & label {
+      color: colors.$hightlight-color;
+    }
+
+    hr{
+       color: colors.$hightlight-color;
+       opacity: 1;
+       width:50%;
+    }
+  }
+
+  @include media-queries.tablet {
+    width: 70%;
+  }
+
+  @include media-queries.mobile {
+    width: 100%;
+    max-width: unset;
+  }
+}

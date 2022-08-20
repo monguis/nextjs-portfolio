@@ -1,7 +1,8 @@
 import { NextPage } from "next";
+import { ContactPage } from "../components/ContactPage";
 
-export const ContactPage:NextPage = () =>{
-    return <>contactame ese</>
+export const Contact:NextPage = () =>{
+    return <ContactPage/>
 }
 
-export default ContactPage;
+export default Contact;
