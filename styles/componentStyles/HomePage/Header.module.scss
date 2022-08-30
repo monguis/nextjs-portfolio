@@ -1,12 +1,13 @@
 @use "../../partials/fonts";
+@use "../../partials/colors";
+@use "../../partials/effects";
 
 .main_header {
-  padding: 200px 0;
+  padding: 15vh 0;
   width: 100%;
   background-image: url(/images/carbon_fibre_pattern.png);
-  color: white;
+  color: colors.$secondary-color;
   position: relative;
-  z-index: -1;
 
   &__headline {
     font-family: fonts.$bold-family;
@@ -22,16 +23,20 @@
   &__learn-more-btn {
     border-radius: 20px 20px 20px 20px;
     padding: 10px 40px;
-    background: #ffa100;
+    background: colors.$hightlight-color;;
     color: black;
     font-weight: bold;
     font-family: fonts.$regular-family;
-    border: 1px solid #ffa100;
+    border: 3px solid colors.$hightlight-color;
     line-height: 18px;
+    box-shadow: effects.$default-shadow;
+    transition: all 0.25s ease;
 
     &:hover {
-      background: #eb9400;
-      border: 1px solid #eb9400;
+      background: colors.$secondary-color;
+      border: 3px solid colors.$primary-color;
+      color:colors.$primary-color;
+      box-shadow: effects.$hovered-shadow;
     }
   }
 }

@@ -12,7 +12,7 @@ const Header: React.FC<any> = () => {
             <Container className="text-center position-relative">
                 <h1 className={styles["main_header__headline"]}>World is full of susprises!</h1>
                 <p className={styles["main_header__blurb"]}>Hey, I&apos;m Juan, and this is my story</p>
-                <button className={styles["main_header__learn-more-btn"]}>Learn More</button>
+                <button className={styles["main_header__learn-more-btn"]}><span>Learn More</span></button>
             </Container>
 
         </section>

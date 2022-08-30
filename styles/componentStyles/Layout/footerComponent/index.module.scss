@@ -5,7 +5,7 @@
 .footer {
     border-top: 1px solid colors.$primary-color;
     height: 100vh;
-    padding-top:50px;
+    // padding-top:50px;
     background-color: colors.$primary-color;
 
     @include media-queries.tablet{
@@ -70,6 +70,8 @@
             
 
             &__top{
+            padding: 100px;
+                max-height: 50%;
                 display: block;
                 display: flex;
                 flex-direction: column;
@@ -94,8 +96,11 @@
                 }
             }
             &__bottom{
+                padding: 100px;
+                max-height: 50%;
                 position:relative;
                 height: 50%;
+                max-height: 50%;
             }
         }
 

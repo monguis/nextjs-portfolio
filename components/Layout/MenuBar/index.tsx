@@ -11,10 +11,11 @@ export type navBarLinkType = {
 }
 
 const MenuBar: React.FC = () => {
-    return <header>
+    return <>
+    <header style={{position:"fixed", top:"0", width:"100%", height:"60px"}}>
         <Navbar className={styles["menu-navbar"]}>
         <Container>
-            <Navbar.Brand href="#home" className={styles["menu-navbar__brand-icon"]} >
+            <Navbar.Brand href="#home" className={`${styles["menu-navbar__brand-icon"]} ${styles["frame-animation"]}`} >
                 JCCN Portfolio
             </Navbar.Brand>
             <Navbar.Collapse className="justify-content-end">
@@ -35,6 +36,8 @@ const MenuBar: React.FC = () => {
         </Container>
     </Navbar>
         </header>
+        <div style={{height:"55px"}}></div>
+    </>
         
 }
 
