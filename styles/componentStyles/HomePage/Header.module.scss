@@ -22,21 +22,21 @@
 
   &__learn-more-btn {
     border-radius: 20px 20px 20px 20px;
-    padding: 10px 40px;
+    padding: 5px 40px;
     background: colors.$hightlight-color;;
-    color: black;
-    font-weight: bold;
+    color: colors.$primary-color;
     font-family: fonts.$regular-family;
     border: 3px solid colors.$hightlight-color;
     line-height: 18px;
-    box-shadow: effects.$default-shadow;
-    transition: all 0.25s ease;
+  //  top:0;
+    transition: transform 0.25s ease;
+    position:relative;
 
     &:hover {
       background: colors.$secondary-color;
       border: 3px solid colors.$primary-color;
       color:colors.$primary-color;
-      box-shadow: effects.$hovered-shadow;
+      top:2px;
     }
   }
 }

@@ -1,3 +1,62 @@
+@use "../../partials/colors";
+
 .what-i-know-section{
     padding:100px 0; 
+    
+    &__skill-tile{
+        $p: &;
+        background: colors.$primary-color;; 
+        color: white;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border:3px solid;
+        transition:0.25s all ease;
+        transition-delay:0.05s;
+        cursor:pointer;
+        &:hover{
+                border:20px solid;
+                box-shadow:inset 0 0 3px 2px;
+                & #{$p}__icon {
+                    filter:drop-shadow(0 0 2px white);
+                }
+                & h4 {
+                   text-shadow:0 0 2px white;
+                }
+        }
+
+        &__icon{
+            margin-bottom:15px;
+            height: 60%;
+
+           
+
+            
+
+           
+        }
+
+        & h4{ 
+
+        }
+        &.javascript{
+            color:#f0db4f;
+        }
+
+        &.react{
+            color:#61dbfb;
+        }
+
+        &.css{
+            color:#264de4 ;
+        }
+
+        &.angular{
+            color:#b52e31 ;
+        }
+    }
 }

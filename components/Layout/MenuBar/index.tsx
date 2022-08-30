@@ -15,7 +15,7 @@ const MenuBar: React.FC = () => {
     <header style={{position:"fixed", top:"0", width:"100%", height:"60px"}}>
         <Navbar className={styles["menu-navbar"]}>
         <Container>
-            <Navbar.Brand href="#home" className={`${styles["menu-navbar__brand-icon"]} ${styles["frame-animation"]}`} >
+            <Navbar.Brand href="/" className={`${styles["menu-navbar__brand-icon"]} ${styles["frame-animation"]}`} >
                 JCCN Portfolio
             </Navbar.Brand>
             <Navbar.Collapse className="justify-content-end">
