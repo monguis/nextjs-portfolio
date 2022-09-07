@@ -41,7 +41,9 @@ const FooterComponent = () => {
                     </ul>
 
                 </div>
-                <div className={styles["footer__content__site-links-container__bottom"] + " " + styles["hover-effect"]}></div>
+                <div className={styles["footer__content__site-links-container__bottom"] + " " + styles["hover-effect"]}>
+                    this was a work of Juan Castellanos, hope you enjoyed the ride
+                </div>
             </div>
         </div>
 

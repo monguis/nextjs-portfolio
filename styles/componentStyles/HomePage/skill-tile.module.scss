@@ -1,0 +1,64 @@
+@use "../../partials/colors";
+
+.skill-tile {
+  &__wrapper {
+    width:100%;
+    position:relative;
+    padding-bottom:100%;
+  }
+  $p: &;
+  $hex-transparency:"ee";
+  position:absolute;
+  background: colors.$primary-color;
+  color: colors.$hightlight-color;
+  padding-bottom: 25%;
+  width: 100%;
+  height: 100%;
+  padding-bottom:0;
+  box-shadow: 2px 2px 5px 2px gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, colors.$hightlight-color, #{colors.$hightlight-color+$hex-transparency});
+  border-radius: 5px;
+  transition: 0.15s all ease;
+  transition-delay: 0.05s;
+  cursor: pointer;
+  &:hover {
+    border: 6px solid;
+    & #{$p}__icon {
+      filter: drop-shadow(0 0 2px white);
+    }
+    & h4 {
+      text-shadow: 0 0 2px white;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    height: 60%;
+  }
+
+  & p {
+    font-size:1.15rem;
+  }
+  &.javascript:hover {
+    color: #f0db4f;
+  }
+
+  &.react:hover {
+    color: #61dbfb;
+  }
+
+  &.css:hover {
+    color: #264de4;
+  }
+
+  &.angular:hover {
+    color: #b52e31;
+  }
+}

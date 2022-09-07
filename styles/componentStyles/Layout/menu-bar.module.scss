@@ -1,30 +1,50 @@
 @use "../../partials/fonts";
 @use "../../partials/effects";
+@use "../../partials/colors";
 
-.menu-navbar{
-    z-index: 9999;
-    border-bottom:1px solid red;
-
-    &__brand-icon{
-        background-color: red; 
+.menu-navbar {
+  z-index: 9999;
+  border-bottom: 1px solid colors.$hightlight-color;
+  background-color: colors.$primary-color;
+  box-shadow: 0 0 4px 1px colors.$hightlight-color;
+  &__brand-icon {
+    color: colors.$hightlight-color;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    &:hover {
+      color: white;
+      text-shadow: 0 0 3px colors.$hightlight-color;
     }
+  }
 
-    &__navlinks-wrapper {
-        display: flex;
-        gap:20px;
-        list-style: none;
-        justify-content: center;
-        margin:0;
+  &__navlinks-wrapper {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
 
-        & .__navlink {
-            position: relative;
-            font-family: fonts.$bold-family;
-            
-            @include effects.middle-to-edges-underline;
-            
-            a {
-                color:black !important;
-            }
-        }
+    & .__navlink {
+      position: relative;
+      font-family: fonts.$regular-family;
+      
+      @include effects.middle-to-edges-underline(colors.$hightlight-color, 1px);
+
+      a {
+        color: colors.$secondary-color !important;
+        &:hover {
+            // color: colors. !important;
+            text-shadow: 0 0 3px colors.$secondary-highlight-color;
+          }
+      }
     }
+  }
+}
+
+.frame-animation {
+  @include effects.segmentedFrameAnimation(
+    colors.$hightlight-color,
+    1px,
+    0.25s
+  );
 }

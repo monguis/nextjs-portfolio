@@ -26,14 +26,12 @@ export const ScrollToTopButton = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
-            /* you can also use 'auto' behaviour
-               in place of 'smooth' */
         });
     };
 
 
     return (
-        <button className={`${styles["scroll-to-top-button"]} ${!visible? styles.hidden:""}`}  onClick={scrollToTop} title="Scroll back to top" 
+        <button className={`${styles["scroll-to-top-button"]} ${!visible? styles.hidden:""}`} tabIndex={visible?0:-1} onClick={scrollToTop} title="Scroll back to top" 
         >
             <FontAwesomeIcon icon={faCircleChevronUp}
                  />
