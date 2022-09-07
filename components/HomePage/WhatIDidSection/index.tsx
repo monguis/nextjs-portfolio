@@ -1,4 +1,5 @@
-import { Col, Row, Container } from "react-bootstrap";
+import Link from "next/link";
+import { Col, Row, Container, Button } from "react-bootstrap";
 import styles from "../../../styles/componentStyles/HomePage/WhatIDidSection.module.scss"
 
 export const WhatIDidSection: React.FC = () => {
@@ -17,6 +18,9 @@ export const WhatIDidSection: React.FC = () => {
                     <div style={{ background: "black", color: "white", height: "300px" }}>project placeholder</div>
                 </Col>
             </Row>
+            <Link href="/portfolio" passHref>
+            <Button><span>More projects...</span></Button>
+            </Link>
         </Container>
 
     </section>
