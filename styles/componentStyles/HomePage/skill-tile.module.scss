@@ -20,7 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid;
+  border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, colors.$hightlight-color, #{colors.$hightlight-color+$hex-transparency});
   border-radius: 5px;
@@ -28,7 +28,7 @@
   transition-delay: 0.05s;
   cursor: pointer;
   &:hover {
-    border: 6px solid;
+    border: 1px solid;
     & #{$p}__icon {
       filter: drop-shadow(0 0 2px white);
     }
@@ -40,7 +40,7 @@
   &__icon {
     margin-bottom: 15px;
     margin-top: 15px;
-    height: 60%;
+    height: 50%;
   }
 
   & p {

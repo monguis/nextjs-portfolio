@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Col, Row, Container, Button } from "react-bootstrap";
 import styles from "../../../styles/componentStyles/HomePage/WhatIDidSection.module.scss"
+import { ProjectTile } from "./ProjectTile";
 
 export const WhatIDidSection: React.FC = () => {
     return <section className={styles["whati-did-section"]}>
@@ -9,8 +10,8 @@ export const WhatIDidSection: React.FC = () => {
             <h3>What I&apos;ve Done</h3>
             <Row>
                 <Col lg="4" xs="12">
-                    <div style={{ background: "black", color: "white", height: "300px" }}>project placeholder</div>
-                </Col>
+                    <ProjectTile></ProjectTile>
+                    </Col>
                 <Col lg="4" xs="12">
                     <div style={{ background: "black", color: "white", height: "300px" }}>project placeholder</div>
                 </Col>

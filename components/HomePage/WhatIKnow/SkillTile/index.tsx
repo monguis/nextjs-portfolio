@@ -19,7 +19,6 @@ export const SkillTile: React.FC<SkillTypeProps> = ({
                 className={`${styles["skill-tile__icon"]} ${styles["react-icon"]}`} />
             <p>{title}</p>
         </div>
-
     </div>
 
 

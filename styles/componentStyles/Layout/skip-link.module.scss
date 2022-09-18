@@ -1,0 +1,19 @@
+@use "../../partials/animations";
+
+.skip-link{
+    background-color: black;
+    display: block;
+    text-align: center;
+    padding:10px 0 20px 0;
+    transform: translateY(-100%);
+    transition:animations.$default-transition;  
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 99999;
+    &:focus {
+        transform: translateY(0%);
+    }
+}
+

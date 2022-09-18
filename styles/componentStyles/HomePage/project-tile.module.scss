@@ -1,0 +1,25 @@
+@use "../../partials/colors";
+
+.project-tile{
+    background: linear-gradient(180deg, 
+    colors.$primary-color 36px,
+    #{colors.$primary-color+"ee"} 10%,
+    #{colors.$primary-color+"dd"} 15%,
+    #{colors.$primary-color+"cc"} 20%,
+    #{colors.$primary-color+"bb"} 25%,
+    #{colors.$primary-color+"aa"} 30%,
+    #{colors.$primary-color+"99"} 35%,
+    #{colors.$primary-color+"88"} 40%,
+    transparent 100%); 
+    height: 100%;
+    border: 2px solid colors.$hightlight-color;
+    text-align:center;
+    position:relative;
+    &:hover{
+        
+    }
+
+    & h4{
+        color: colors.$hightlight-color;
+    }
+}

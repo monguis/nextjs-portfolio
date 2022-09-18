@@ -7,7 +7,7 @@ import { menuLinksArray } from "../MenuBar/content/menuLinksArray"
 import Link from "next/link";
 
 const FooterComponent = () => {
-    return <footer className={styles["footer"]}>
+    return <footer className={styles["footer"]} id="footer">
         <div className={styles["footer__content"]}>
             <div className={styles["footer__content__info-container"] + " " + styles["hover-effect"]}>
                 <h3>Wanna learn more<br /> about me?</h3>
