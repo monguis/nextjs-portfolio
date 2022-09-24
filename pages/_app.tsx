@@ -6,14 +6,15 @@ import TagManager, { TagManagerArgs } from "react-gtm-module";
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const gtmId = process.env.GTM_ID;
+  const gtmId = process.env.GTM_ID || "";
 
   const tagManagerArgs: TagManagerArgs = {
-    gtmId: gtmId || ""
+    gtmId: gtmId
   }
 
   useEffect(() => {
-    if (gtmId)
+
+    if (gtmId !== "")
       TagManager.initialize(tagManagerArgs)
   })
 
