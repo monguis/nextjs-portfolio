@@ -1,0 +1,40 @@
+@use "../../partials/colors";
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 20px;
+  &__written-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__description-paragraph {
+        margin-left:20px;
+        padding-left: 10px;
+        border-left:1px solid colors.$primary-color;
+    }
+  }
+
+  &__location-logo {
+    &__wrapper {
+      flex-shrink: 0;
+      width: 200px;
+      max-height: 150px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    &__image {
+      height: 100%;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.main__written-content__description-paragraph{
+    
+}

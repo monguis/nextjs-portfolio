@@ -1,6 +1,12 @@
 @use "../../partials/colors";
+@use "../../partials/effects";
 
 .skill-tile {
+  @include effects.segmentedFrameAnimation(
+    colors.$hightlight-color,
+    1px,
+    0.25s
+  );
   &__wrapper {
     width:100%;
     position:relative;
@@ -20,22 +26,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, colors.$hightlight-color, #{colors.$hightlight-color+$hex-transparency});
+  // border: 1px solid;
+  // border-image-slice: 1;
+  // border-image-source: linear-gradient(to left, colors.$hightlight-color, #{colors.$hightlight-color+$hex-transparency});
   border-radius: 5px;
   transition: 0.15s all ease;
   transition-delay: 0.05s;
   cursor: pointer;
-  &:hover {
-    border: 1px solid;
-    & #{$p}__icon {
-      filter: drop-shadow(0 0 2px white);
-    }
-    & h4 {
-      text-shadow: 0 0 2px white;
-    }
-  }
+
+ 
+  // &:hover {
+  //   border: 1px solid;
+  //   & #{$p}__icon {
+  //     filter: drop-shadow(0 0 2px white);
+  //   }
+  //   & h4 {
+  //     text-shadow: 0 0 2px white;
+  //   }
+  // }
 
   &__icon {
     margin-bottom: 15px;
