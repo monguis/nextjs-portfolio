@@ -16,6 +16,7 @@ jobs:
 
     env:
       NEXT_PUBLIC_BASE_PATH: /nextjs-portfolio
+      GTM_ID: GTM-M6BGQZB
 
     strategy:
       matrix:
