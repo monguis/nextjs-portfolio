@@ -7,14 +7,13 @@ on:
   push:
     branches: [main]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     env:
       NEXT_PUBLIC_BASE_PATH: /nextjs-portfolio 
-      GTM_ID: GTM-M6BGQZB
+      GTM_ID: GTM-M6BGQZB 
 
     strategy:
       matrix:
@@ -24,6 +23,8 @@ jobs:
     steps:
       - name: Get files
         uses: actions/checkout@v2
+      - name: Check for cookie id
+        run: echo "The API key is:${{env.GTM_ID}}"   
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
