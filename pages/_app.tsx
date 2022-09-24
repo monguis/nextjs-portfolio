@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   useEffect(() => {
-
+    console.log(gtmId)
     if (gtmId !== "")
       TagManager.initialize(tagManagerArgs)
   })
