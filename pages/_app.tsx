@@ -6,7 +6,7 @@ import TagManager, { TagManagerArgs } from "react-gtm-module";
 
 function MyApp({ Component, pageProps }: AppProps) {
 
-  const gtmId = process.env.GTM_ID || "";
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "";
 
   const tagManagerArgs: TagManagerArgs = {
     gtmId: gtmId
